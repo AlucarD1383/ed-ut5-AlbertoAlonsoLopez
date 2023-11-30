@@ -4,6 +4,7 @@ Pide por teclado un número n y dibuja un triángulo rectángulo de n elementos 
 para ello asteriscos (*). Por ejemplo, para n = 5:
  */
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 public class eje3 {
     public static void main(String[] args)
@@ -30,5 +31,8 @@ public class eje3 {
         //Hacemos el Salto de linea dentro del primer bucle una vez se ha pintado el asterisco del segundo bucle.
         System.out.println();
         }
+
+        // añado comentario para imprimir por pantalla
+        System.out.print("Hacer una piramide con dos bucles for puede resultar dificil en un inicio.");
     }
 }
