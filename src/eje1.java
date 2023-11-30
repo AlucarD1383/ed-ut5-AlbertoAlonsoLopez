@@ -10,43 +10,22 @@ número aleatorio entre 1 y 100.
 import java.util.Scanner;
 public class eje1 {
     public static void main(String[] args) {
-        //Declaramos las variables
-        Scanner sc = new Scanner(System.in);
-        int num,ale;
-        boolean salir=false;
 
-        //Asignamos el valor random a la variable con la funcion random.
-        ale= 1 + (int) (Math.random()*100);
+//MODIFICO EL EJERCICIO 1 PARA QUE SE NOTE
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("ADIVINA EL NÚMERO\n");//Titulo del programa con salto de linea adicional
-        //Iniciamos bucle para adivinar el numero asignado anteriormente
+//PEDIMOS 2 NUMEROS
+        System.out.println("Introduce el primer número: ");
+        int primerNumero = scanner.nextInt();
 
-        do
-        {
-            System.out.print("introduce un número entre 1 y 100: ");
-            num=sc.nextInt();//Solicitamos número al usuario y lo guardamos en la variable num
+        System.out.println("Introduce el segundo número: ");
+        int segundoNumero = scanner.nextInt();
 
-                //con los if comprobamos si el numero es mayor, menor, si ha acertado el número secreto o si se rinde
-                if(num==ale)
-                {
-                    System.out.println("Enhorabuena. El numero secreto era "+ale);
-                    salir=true; // Cambiamos el valor de la variable booleana si a acertado
-                }
-                else if (num<ale)
-                {
-                    System.out.println("El número secreto es mayor al introducido");
-                }
-                else
-                {
-                    System.out.println("El número secreto es menor al introducido");
-                }
-                if(num==-1)
-                {
-                    System.out.println("Mala suerte. No has acertado el número secreto");
-                    salir=true;//Cambiamos el valor de la variable si se ha rendido
-                }
-        }while(!salir);//Salimos del bucle cuando el valor sea true.
+        //MULTIPLICAMOS LOS NUMEROS Y MOSTRAMOS EL RESULTADO EN PANTALLA
 
-        sc.close();//Limpiamos Buffer
+        int resultado = primerNumero * segundoNumero;
+
+        System.out.println("El resultado de la multiplicacion es: " + resultado);
     }
 }
+
